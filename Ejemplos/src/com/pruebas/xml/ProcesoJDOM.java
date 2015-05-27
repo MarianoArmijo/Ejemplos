@@ -15,13 +15,12 @@ import org.jdom2.output.XMLOutputter;
 
 public class ProcesoJDOM {
 	
-	public static void main(String[] args) throws FileNotFoundException,
-			JDOMException, IOException {
+	public static void main(String[] args) throws FileNotFoundException, JDOMException, IOException {
 
 		//CREAMOS EL PARSER
 		SAXBuilder builder = new SAXBuilder();
 		// Construimos el arbol DOM a partir del fichero xml
-		Document documentJDOM = builder.build(new FileInputStream("libros.xml"));
+		Document documentJDOM = builder.build(new FileInputStream("Archivos//libros.xml"));
 
 		//MOSTRAMOS EL DOCUMENTO
 		Element raiz = documentJDOM.getRootElement();
@@ -38,17 +37,41 @@ public class ProcesoJDOM {
 				System.out.println("Valor =" + detalle.getValue());
 
 			}
-
 			
 		}
 		
-		//AÑADO UN NUEVO HIJO
+		//AÑADO UN NUEVO HIJO PARA INSERTARSELO AL ELEMENTO RAIZ
 		Element padre = documentJDOM.getRootElement();
 	    // Creamos una nueva etiqueta  
 	    Element nuevolibro = new Element("libro");  
 	    // Añadimos un atributo  
-	    nuevolibro.setAttribute("isbn", "xxxx-yyyy");  
-	    padre.addContent(nuevolibro);  
+	    nuevolibro.setAttribute("isbn", "000-00-0000-000-0");  
+	 
+	    
+	    Element titulo = new Element("titulo");
+	    
+	    titulo.addContent("Los juegos");
+	    nuevolibro.addContent(titulo);
+	    
+	    Element autor = new Element("autor");
+	    
+	    autor.addContent("Larra");
+	    nuevolibro.addContent(autor);
+	    
+	    Element anyo = new Element("anyo");
+	    
+	    anyo.addContent("1994");
+	    nuevolibro.addContent(anyo);
+	    
+	    Element editorial = new Element("editorial");
+	    
+	    editorial.addContent("Edelvives");
+	    nuevolibro.addContent(editorial);
+	    
+	    
+	    
+	    //Añadimos un nuevo elemento al padre mediante hijo
+	    padre.addContent(nuevolibro);
 
 	    
 	   //SERIALIZO EL DOCUMENT A UN FICHERO DE SALIDA

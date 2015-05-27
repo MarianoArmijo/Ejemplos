@@ -63,8 +63,15 @@ public class Libro {
 	      sb.append("\nEditorial: "+editorial);  
 	        
 	      return sb.toString();  
-	   }  
-	     
-	     
-	  
-	}  
+	   }
+	   
+		public int compareTo(Libro book, Libro book1) {
+			 
+	      String bookname = book.getTitulo().toUpperCase();
+	      String book1name = book1.getTitulo().toUpperCase();
+ 
+	      return bookname.compareTo(book1name);
+ 
+	    }
+	   
+} 
