@@ -13,8 +13,7 @@ public class ListaPersonas {
 	
 	private Persona[] array_personas;	
 	
-	public ListaPersonas()
-	{
+	public ListaPersonas() {
 		//TODO HAY QUE HACER UN CONSTRUCTOR
 		//RECUERDA QUE EL CONSTRUCTOR SIRVE PARA
 			//RESERVAR MEMORIA

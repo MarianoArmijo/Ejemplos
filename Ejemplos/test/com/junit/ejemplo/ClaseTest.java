@@ -2,6 +2,7 @@ package com.junit.ejemplo;
 
 import static org.junit.Assert.*;
 
+import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -14,6 +15,12 @@ public class ClaseTest {
 		
 		tester = new Operaciones();
 		
+	}
+	
+	@AfterClass
+	public static void terminaClase() {
+		
+		tester = null;
 	}
 	
 	//Para  cada método que queramos utilizar de la clase
