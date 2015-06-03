@@ -2,6 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="src" path="bbdd"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 	<classpathentry kind="lib" path="I:/curso-programacion/archivos/jdom-2.0.6/jdom-2.0.6.jar">
 		<attributes>
@@ -10,5 +11,6 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="I:/curso-programacion/archivos/log4j-all-1.3alpha-8.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="I:/curso-programacion/archivos/ojdbc14.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
