@@ -4,13 +4,13 @@
 	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="src" path="bbdd"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
-	<classpathentry kind="lib" path="I:/curso-programacion/archivos/jdom-2.0.6/jdom-2.0.6.jar">
+	<classpathentry kind="lib" path="C:/Users/Manin/Desktop/workspace/archivos/jdom-2.0.6/jdom-2.0.6.jar">
 		<attributes>
-			<attribute name="javadoc_location" value="jar:file:/I:/curso-programacion/archivos/jdom-2.0.6/jdom-2.0.6-javadoc.jar!/"/>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/Manin/Desktop/workspace/archivos/jdom-2.0.6/jdom-2.0.6-javadoc.jar!/"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="I:/curso-programacion/archivos/log4j-all-1.3alpha-8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Manin/Desktop/workspace/archivos/log4j-all-1.3alpha-8.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="I:/curso-programacion/archivos/ojdbc14.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Manin/Desktop/workspace/archivos/ojdbc14.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
