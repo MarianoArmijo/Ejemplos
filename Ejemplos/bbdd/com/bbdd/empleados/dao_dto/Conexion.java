@@ -15,24 +15,60 @@ public class Conexion {
 	private static final String conexion = "jdbc:oracle:thin:@localhost:1521:xe";
 	
 	public static Statement conectarBBDD() throws SQLException, ClassNotFoundException {
-		Connection conn = null;
 
 		Statement stmt = null;
 		Class.forName(driver);
-		conn = DriverManager.getConnection(conexion, PedirDatos.pedirUsuario(), PedirDatos.pedirContraseña());
 		
+		Connection conn = DriverManager.getConnection(conexion, PedirDatos.pedirUsuario(), PedirDatos.pedirContraseña());
+		
+		// Establecemos AutoCommit a false esto internamente hace una copia de las instrucciones
+		// que vamos a ejecutar.
 		conn.setAutoCommit(false);
-		Savepoint savepoint = conn.setSavepoint();
 		conn.commit();
+
+		Savepoint savepoint = conn.setSavepoint();
+		
+		if (conn != null) {
+			
+			try { 
+				conn.rollback(savepoint); 
+
+			}
+			
+			catch (Exception e3) {
+				
+				e3.printStackTrace();
+			}
+		}
 		
 		stmt = conn.createStatement();
-		
-//		conn.rollback(savepoint);
-		
 		return stmt;
 	}
+	
 	public static void LiberarRecursos(){
-		if (stmt != null)	{ try {	stmt.close(); } catch (Exception e2) { e2.printStackTrace(); }}
-		if (conn != null) 	{ try { conn.close(); } catch (Exception e3) { e3.printStackTrace(); }}
+		if (stmt != null) {
+			
+			try {	
+				stmt.close(); 
+			} 
+			
+			catch (Exception e2) { 
+				
+				e2.printStackTrace(); 
+			}
+		}
+		
+		if (conn != null) {
+			
+			try { 
+				
+				conn.close(); 
+			}
+			
+			catch (Exception e3) {
+				
+				e3.printStackTrace();
+			}
+		}
 	}
 }

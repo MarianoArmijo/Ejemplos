@@ -28,9 +28,12 @@ public class EmpleadoDAO {
 				String commission = rset.getString(9);
 				String manager = rset.getString(10);
 				String department = rset.getString(11);
-				arraylist.add(new EmpleadoDTO( employee, firstname, lastname, email,
-					 phone, hiredate, job, salary, commission, 
-					 manager, department));
+				
+				EmpleadoDTO obj = new EmpleadoDTO(employee, firstname, lastname, email,
+						 phone, hiredate, job, salary, commission, 
+						 manager, department);
+				
+				arraylist.add(obj);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
