@@ -9,9 +9,9 @@ public class FicheroArray {
 	public static int ficheroContar(String contar) throws IOException {
 		int contador = 0;
 		BufferedReader br =	new BufferedReader(new FileReader(contar));
-		
+			
 			String linea = null;
-			//leer fichero.
+			//Leer fichero.
 			while((linea = br.readLine()) != null) {
 				contador++;
 				}
