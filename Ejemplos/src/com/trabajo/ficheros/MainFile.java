@@ -2,6 +2,8 @@ package com.trabajo.ficheros;
 
 import java.io.*;
 
+// Clase MainFile
+
 public class MainFile {
 	
 	public static String separador = "|";
